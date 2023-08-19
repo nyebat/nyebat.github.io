@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Common styling */
+        .content {
+            padding: 20px;
+        }
+
+        /* Desktop styles */
+        @media (min-width: 768px) {
+            .sidebar {
+                width: 250px;
+                height: 100%;
+                background-color: #f2f2f2;
+                position: fixed;
+                left: 0;
+                top: 0;
+                overflow-x: hidden;
+                transition: 0.5s;
+            }
+            .content {
+                margin-left: 250px;
+            }
+        }
+
+        /* Mobile styles */
+        @media (max-width: 767px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                background-color: #f2f2f2;
+                position: relative;
+                overflow-x: hidden;
+                transition: 0.5s;
+            }
+            .content {
+                margin: 0;
+            }
+        }
+
+        /* Styling tombol navigasi */
+        .navigation {
+            position: fixed;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .prev-button, .next-button {
+            margin: 0 10px;
+        }
+
+        /* Styling tombol toggle sidebar */
+        #toggle-button {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <button id="toggle-button">Toggle Sidebar</button>
+        <p>Daftar Isi</p>
+        <a href="#">Bagian 1</a><br>
+        <a href="#">Bagian 2</a><br>
+        <a href="#">Bagian 3</a><br>
+    </div>
+    <div class="content">
+        <h1>Konten Utama</h1>
+        <p>Ini adalah konten utama halaman.</p>
+    </div>
+    <div class="navigation">
+        <button class="prev-button">Halaman Sebelumnya</button>
+        <button class="next-button">Halaman Berikutnya</button>
+    </div>
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const toggleButton = document.getElementById('toggle-button');
+        const prevButton = document.querySelector('.prev-button');
+        const nextButton = document.querySelector('.next-button');
+
+        toggleButton.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        prevButton.addEventListener('click', () => {
+            // Logika untuk halaman sebelumnya
+            console.log('Halaman sebelumnya');
+        });
+
+        nextButton.addEventListener('click', () => {
+            // Logika untuk halaman berikutnya
+            console.log('Halaman berikutnya');
+        });
+    </script>
+</body>
+</html>
 
