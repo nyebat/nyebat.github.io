@@ -1,0 +1,79 @@
+:root {
+    --bg: #1f2335;
+    --fg: #f8f8f2;
+    --select: #44475a;
+    --pink: #ff79c6;
+    --orange: #ffb86c;
+    --yellow: #f1fa8c;
+    --red: #ff5555;
+    --green: #50fa7b;
+    --purple: #bd93f9;
+    --cyan: #8be9fd;
+    --blue: #d6acff;
+    --black: #191a21;
+    --comment: #6272a4;
+}
+.pink {color: var(--pink);}
+.orange {color: var(--orange);}
+.yellow {color: var(--yellow);}
+.red {color: var(--red);}
+.green {color: var(--green);}
+.purple {color: var(--purple);}
+.cyan {color: var(--cyan);}
+.comment {color: var(--comment);}
+
+body {
+    font-family: serif;
+    margin: 50px 50px 50px 50px;
+    padding: auto;
+    background-color: var(--bg);
+    color: var(--fg);
+}
+code  {
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.sub1 {
+    text-align: center;
+    color: darkorchid;
+}
+.sub2 {
+    color: var(--red);
+}
+.example {
+    color: var(--fg);
+    font-weight: bold;
+}
+
+.code-area {
+    margin-left: 60px;
+    border-left: 3px solid #69ff94;
+    padding-left: 20px;
+    font-size: larger;
+}
+
+.indent {
+    margin-left: 20px;
+    display: block;
+}
+.indent2 {
+    margin-left: 40px;
+    display: block;
+}
+.indent3 {
+    margin-left: 60px;
+    display: block;
+}
+.indent4 {
+    margin-left: 80px;
+    display: block;
+}
+
+.bubble {
+    background-color: var(--select);
+    color: var(--cyan);
+    border-radius: 5px;
+    padding: 0px 5px;
+}
+
