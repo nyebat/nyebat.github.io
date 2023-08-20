@@ -1,103 +1,74 @@
 <!DOCTYPE html>
-<html>
+
+<!DOCTYPE html>
+<html lang="id">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        /* Common styling */
-        .content {
-            padding: 20px;
-        }
-
-        /* Desktop styles */
-        @media (min-width: 768px) {
-            .sidebar {
-                width: 250px;
-                height: 100%;
-                background-color: #f2f2f2;
-                position: fixed;
-                left: 0;
-                top: 0;
-                overflow-x: hidden;
-                transition: 0.5s;
-            }
-            .content {
-                margin-left: 250px;
-            }
-        }
-
-        /* Mobile styles */
-        @media (max-width: 767px) {
-            .sidebar {
-                width: 100%;
-                height: auto;
-                background-color: #f2f2f2;
-                position: relative;
-                overflow-x: hidden;
-                transition: 0.5s;
-            }
-            .content {
-                margin: 0;
-            }
-        }
-
-        /* Styling tombol navigasi */
-        .navigation {
-            position: fixed;
-            bottom: 20px;
-            width: 100%;
-            text-align: center;
-        }
-
-        .prev-button, .next-button {
-            margin: 0 10px;
-        }
-
-        /* Styling tombol toggle sidebar */
-        #toggle-button {
-            display: block;
-            width: 100%;
-            text-align: center;
-            padding: 10px;
-            border-top: 1px solid #ccc;
-        }
-    </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rust Indonesia</title>
+	<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <div class="sidebar" id="sidebar">
-        <button id="toggle-button">Toggle Sidebar</button>
-        <p>Daftar Isi</p>
-        <a href="#">Bagian 1</a><br>
-        <a href="#">Bagian 2</a><br>
-        <a href="#">Bagian 3</a><br>
-    </div>
-    <div class="content">
-        <h1>Konten Utama</h1>
-        <p>Ini adalah konten utama halaman.</p>
-    </div>
-    <div class="navigation">
-        <button class="prev-button">Halaman Sebelumnya</button>
-        <button class="next-button">Halaman Berikutnya</button>
-    </div>
-    <script>
-        const sidebar = document.getElementById('sidebar');
-        const toggleButton = document.getElementById('toggle-button');
-        const prevButton = document.querySelector('.prev-button');
-        const nextButton = document.querySelector('.next-button');
+	<h1 class="sub1">Variabel</h1>
 
-        toggleButton.addEventListener('click', () => {
-            sidebar.classList.toggle('active');
-        });
+	<h2 class="sub2">Variable Imutable</h2>
+	<p>
+		<span class="indent">Variabel pada pemrograman rust dideklarasikan menggunakan kata kunci <code class="bubble">let</code>.</span>
+	</p>
 
-        prevButton.addEventListener('click', () => {
-            // Logika untuk halaman sebelumnya
-            console.log('Halaman sebelumnya');
-        });
+	
+		<h2 class="example">
+			<span class="indent2">Contoh</span>
+		</h2>
+	
 
-        nextButton.addEventListener('click', () => {
-            // Logika untuk halaman berikutnya
-            console.log('Halaman berikutnya');
-        });
-    </script>
+	<div class="code-area">
+		<code>
+			<span class="cyan">fn</span> <span class="green">main</span>() {
+			<br/>
+				<span class="indent2">
+					<span class="pink">let</span> a <span class="pink">=</span> <span class="purple">10</span>;
+					<br/>
+
+					<span class="pink">let</span> b <span class="pink">=</span> <span class="purple">3</span>;
+					<br/>
+
+					<span class="orange">println!</span>(<span class="yellow">"{}"</span>, a <span class="pink">+</span> b);
+					<span class="comment"> //output: 13</span>
+				</span> <!-- indent2 ended -->
+			}
+		</code>
+	</div> <!-- kode-area ended -->
+	
+
+	<h2 class="sub2">Variable mutable</h2>
+
+	<p>
+		<span class="indent">
+			Secara default, variabel pada rust bersifat imutable, untuk membuatnya menjadi mutable kita perlu menambahkan kata kunci <code class="bubble">let mut</code>.
+		</span>
+	</p>
+
+	<h2 class="example">
+		<span class="indent2">Contoh</span>
+	</h2>
+
+	<div class="code-area">
+		<code>
+			<span class="cyan">fn</span> <span class="green">main</span>() {
+			<br/>
+				<span class="indent2">
+					<span class="pink">let mut</span> a <span class="pink">=</span> <span class="purple">10</span>;
+					<br/>
+					
+					a <span class="pink">=</span> <span class="purple">17</span>;<span class="comment"> //memperbarui nilai a menjadi 17</span>
+					<br/>
+					
+					<span class="orange">println!</span>(<span class="yellow">"{}"</span>, a);<span class="comment"> //output: 17</span>
+				</span>
+			}
+		</code>
+	</div>
 </body>
 </html>
-
